@@ -89,4 +89,20 @@ public class Persoon {
 
         return s;
     }
+
+
+    public Game zoekGameOpNaam(String gameToSearchFor) {
+        int t = 0;
+        Game g ;
+        for (int i = 0 ; i > mijnGames.size() ; i++)
+        {
+            t = (mijnGames.get(i).getNaam().contains(gameToSearchFor)) ? mijnGames.indexOf(mijnGames.get(i)):null ;
+        }
+        return mijnGames.get(t);
+    }
+
+    public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
+
+        return mijnGames;
+    }
 }

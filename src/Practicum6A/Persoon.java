@@ -102,7 +102,12 @@ public class Persoon {
     }
 
     public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {
-
-        return mijnGames;
+        ArrayList<Game> nogNietInBezit = new ArrayList<Game>();
+        for (Game a: teKoop) {
+            if(!mijnGames.contains(a)){
+                nogNietInBezit.add(a);
+            }
+        }
+        return nogNietInBezit;
     }
 }

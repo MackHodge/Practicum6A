@@ -1,14 +1,20 @@
 package Practicum6A;
 
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 public class Game {
 
     private String naam;
     private int huidigJaar ;
-    final private int  releaseJaar;
+
     private double discoutPrijs;
     private double nieuwprijs;
+
+    private String pattern = "0.00";
+    private DecimalFormat decimalFormat = new DecimalFormat(pattern);
+
+    final private int  releaseJaar;
 
     public Game(String Title, int ReleaseJaar, double Prijs) {
             naam = Title;
@@ -46,5 +52,9 @@ public class Game {
 
     }
 
-
+    @Override
+    public String toString() {
+        String s = ""+naam+", uitgegeven in "+releaseJaar +"; nieuwprijs: €"+decimalFormat.format(nieuwprijs)+" nu voor: €"+decimalFormat.format( huidigeWaarde())+"";
+        return s;
+    }
 }

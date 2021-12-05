@@ -11,7 +11,7 @@ public class Persoon {
     private String pattern = "0.00";
     private DecimalFormat decimalFormat = new DecimalFormat(pattern);
 
-    public Persoon(String Name, int bud) {
+    public Persoon(String Name, double bud) {
         this.name = Name;
         this.budget = bud;
     }
@@ -43,6 +43,10 @@ public class Persoon {
                 return true;
         }
         return false;
+    }
+
+    public double getBudget() {
+        return budget;
     }
 
     /**

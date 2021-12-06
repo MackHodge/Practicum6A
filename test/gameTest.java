@@ -1,5 +1,5 @@
 
-import Practicum6A.Game;
+import Practicum6B.Game;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

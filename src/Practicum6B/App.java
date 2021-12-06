@@ -1,4 +1,4 @@
-package Practicum6A;
+package Practicum6B;
 
 import java.time.LocalDate;
 import java.util.ArrayList;

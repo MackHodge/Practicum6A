@@ -1,4 +1,4 @@
-package Practicum6A;
+package Practicum6B;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -92,13 +92,13 @@ public class Persoon {
 
 
     public Game zoekGameOpNaam(String gameToSearchFor) {
-        int t = 0;
-        Game g ;
-        for (int i = 0 ; i > mijnGames.size() ; i++)
+        for (int i = 0 ; i < mijnGames.size() ; i++)
         {
-            t = (mijnGames.get(i).getNaam().contains(gameToSearchFor)) ? mijnGames.indexOf(mijnGames.get(i)):null ;
+            if(mijnGames.get(i).getNaam().equals(gameToSearchFor)) {
+                return  mijnGames.get(i) ;
+            }
         }
-        return mijnGames.get(t);
+        return null;
     }
 
     public ArrayList<Game> bepaalGamesNietInBezit(ArrayList<Game> teKoop) {

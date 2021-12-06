@@ -1,8 +1,7 @@
-import Practicum6A.Game;
-import Practicum6A.Persoon;
+import Practicum6B.Game;
+import Practicum6B.Persoon;
 
 
-import Practicum6A.Persoon;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 

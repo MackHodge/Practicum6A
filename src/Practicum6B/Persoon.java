@@ -50,9 +50,7 @@ public class Persoon {
 
     public boolean verkoop(Game gameToSell, Persoon koper) {
 
-        if(mijnGames.contains(gameToSell) && !koper.mijnGames.contains(gameToSell) && koper.budget >= gameToSell.huidigeWaarde()) {
-            koper.budget -= gameToSell.huidigeWaarde();
-            koper.mijnGames.add(gameToSell);
+        if(mijnGames.contains(gameToSell) && koper.koop(gameToSell)) {
             mijnGames.remove(gameToSell);
             budget += gameToSell.huidigeWaarde();
             return true;
